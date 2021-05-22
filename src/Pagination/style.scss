@@ -1,0 +1,59 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 4rem;
+  margin: 2rem 0 2rem;
+
+  &__btn,
+  &__numbers,
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: $secondary-color;
+    border: 1px solid #f1f1f1;
+
+    &:disabled {
+      color: #b7b7b7;
+      cursor: initial;
+    }
+  }
+
+  &__dots {
+    height: 2.6rem;
+    width: 2.6rem;
+    cursor: initial;
+  }
+
+  &__numbers {
+    height: 2.6rem;
+    width: 2.6rem;
+
+    &:hover {
+      background-color: #cf4b53;
+      color: #fff;
+      @include transition-ease;
+    }
+  }
+
+  &__btn {
+    height: 2.6rem;
+    width: 4rem;
+
+    &:hover {
+      background-color: #cf4b53;
+      color: #fff;
+      @include transition-ease;
+    }
+  }
+
+  .active {
+    background-color: #cf4b53;
+    color: #fff;
+  }
+}
